@@ -1,12 +1,10 @@
-"use client"
-
 import { Header } from "@/components/Header"
 import blogData from "@/data/blog.json"
 import { notFound } from "next/navigation"
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import Link from "next/link"
-import { use } from "react"
+import { Metadata } from 'next'
 
 type ContentSection = {
   type: 'text' | 'code' | 'heading'
@@ -24,9 +22,38 @@ type BlogPost = {
   content: ContentSection[]
 }
 
-export default function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
-  const post = blogData.posts.find(p => p.id === id) as BlogPost | undefined
+// Generate metadata for each blog post
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const post = blogData.posts.find(p => p.id === params.id)
+  
+  if (!post) {
+    return {
+      title: 'Post não encontrado',
+      description: 'O post que você está procurando não existe.'
+    }
+  }
+
+  return {
+    title: `${post.title} | Blog de Delfim Celestino`,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: 'article',
+      publishedTime: post.date,
+      authors: ['Delfim Celestino'],
+      tags: post.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+    }
+  }
+}
+
+export default function BlogPostPage({ params }: { params: { id: string } }) {
+  const post = blogData.posts.find(p => p.id === params.id) as BlogPost | undefined
   
   if (!post) {
     notFound()
