@@ -23,7 +23,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-black text-white pb-20 md:pb-0">
-      <Header showBackButton backLink="/" />
+      <Header />
 
       {/* Main content */}
       <main className="flex items-center justify-center md:justify-start px-6 md:pl-32 md:pr-8 min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-120px)]">
