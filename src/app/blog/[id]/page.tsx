@@ -22,8 +22,13 @@ type BlogPost = {
   content: ContentSection[]
 }
 
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
 // Generate metadata for each blog post
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogData.posts.find(p => p.id === params.id)
   
   if (!post) {
@@ -52,7 +57,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   }
 }
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
+export default function BlogPostPage({ params }: Props) {
   const post = blogData.posts.find(p => p.id === params.id) as BlogPost | undefined
   
   if (!post) {
