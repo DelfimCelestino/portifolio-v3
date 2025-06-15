@@ -13,16 +13,8 @@ export function Header({ showBackButton = false, backLink = "/" }: HeaderProps) 
   return (
     <header className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-sm z-50 border-b border-gray-800">
       <div className="flex items-center justify-between p-4 md:p-8 max-w-7xl mx-auto">
-        {/* Left side - Avatar and Back button */}
+        {/* Left side - Avatar */}
         <div className="flex items-center gap-4">
-          {showBackButton && (
-            <Link
-              href={backLink}
-              className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm"
-            >
-              ← Voltar
-            </Link>
-          )}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-full bg-gray-600 overflow-hidden relative">
               <Image

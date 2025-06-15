@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${space_grotest.className} antialiased`}
+        className={`${space_grotest.className} antialiased pt-24 md:pt-32 bg-black`}
       >
         {children}
       </body>

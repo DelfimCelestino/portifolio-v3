@@ -17,7 +17,7 @@ export default function Portfolio() {
       <Header />
 
       {/* Main content - centered */}
-      <main className="flex items-center justify-center px-6 pt-24 md:pt-32 min-h-screen">
+      <main className="flex items-center justify-center px-6 min-h-screen">
         <div className="max-w-4xl w-full">
           {/* Profile Section */}
           <div className="text-center mb-12">
