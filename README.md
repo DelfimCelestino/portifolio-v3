@@ -13,7 +13,7 @@ Este é meu portfólio pessoal, desenvolvido com Next.js e Tailwind CSS. O proje
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/delfimcelestino/portifolio-v2.git
+git clone https://github.com/delfimcelestino/portifolio-v3.git
 ```
 
 2. Instale as dependências:
