@@ -1,0 +1,75 @@
+{
+  "projects": [
+    {
+      "id": "planaki",
+      "title": "Planaki",
+      "description": "Planaki é o app social para criar eventos, compartilhar fotos, conversar em tempo real e organizar contribuições — coletivas ou individuais, públicas ou privadas — tudo para viver e guardar momentos especiais com amigos e família.",
+      "longDescription": "Planaki é uma plataforma social inovadora que revoluciona a forma como as pessoas organizam e compartilham momentos especiais. Com foco na experiência do usuário e na facilidade de uso, o aplicativo permite criar eventos, compartilhar fotos em tempo real e gerenciar contribuições de forma intuitiva.\n\nA plataforma oferece recursos avançados de comunicação em tempo real, permitindo que grupos de amigos e família mantenham-se conectados e organizados durante eventos e celebrações. Com suporte para contribuições coletivas e individuais, o Planaki facilita o planejamento e a execução de eventos de todos os tipos.",
+      "technologies": [
+        "Expo",
+        "React Native",
+        "PostgreSQL",
+        "NodeJs",
+        "Socket.IO",
+        "TypeScript"
+      ],
+      "features": [
+        "Criação e gerenciamento de eventos",
+        "Compartilhamento de fotos em tempo real",
+        "Chat em tempo real com Socket.IO",
+        "Sistema de contribuições coletivas e individuais",
+        "Eventos públicos e privados",
+        "Notificações em tempo real"
+      ],
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.nirmata.planaki"
+    },
+    {
+      "id": "radii",
+      "title": "Radii",
+      "description": "Uma rede social baseada em proximidade geográfica que mostra pessoas próximas a você em tempo real. Mas aqui está a reviravolta: essas pessoas desaparecem da sua lista 'Próximos' em 24 horas, a menos que você tome uma ação.",
+      "longDescription": "Radii é uma rede social inovadora que revoluciona a forma como as pessoas se conectam com base na proximidade geográfica. A plataforma utiliza tecnologia de localização em tempo real para mostrar pessoas próximas a você, criando oportunidades únicas de conexão e interação social.\n\nO diferencial do Radii está em seu mecanismo de expiração: as conexões têm um prazo de 24 horas para serem estabelecidas. Se você encontrar alguém interessante nas proximidades, precisa sincronizar com essa pessoa para mantê-la em sua rede. Isso incentiva interações mais significativas e decisões mais conscientes sobre suas conexões sociais.",
+      "technologies": [
+        "Expo",
+        "React Native",
+        "PostgreSQL",
+        "NodeJs",
+        "Socket.IO",
+        "TypeScript",
+        "Google Maps API"
+      ],
+      "features": [
+        "Detecção de pessoas próximas em tempo real",
+        "Sistema de expiração de conexões em 24 horas",
+        "Mecanismo de sincronização para manter conexões",
+        "Mapa interativo com visualização de proximidade",
+        "Chat em tempo real com conexões estabelecidas",
+        "Configurações personalizáveis de privacidade"
+      ],
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.nirmata.radii"
+    },
+    {
+      "id": "owani",
+      "title": "Owani",
+      "description": "Uma plataforma de real estate projetada para atender às necessidades específicas do mercado imobiliário de Moçambique. Conecta acompanhantes — profissionais que auxiliam em visitas a imóveis para alugar — com potenciais inquilinos e proprietários.",
+      "longDescription": "O Owani é uma plataforma de real estate projetada para atender às necessidades específicas do mercado imobiliário de Moçambique. O foco principal é conectar acompanhantes — profissionais que auxiliam pessoas em visitas a imóveis para alugar — com potenciais inquilinos e proprietários.\n\nA plataforma permite que os acompanhantes cadastrem seu serviço, publiquem casas que conhecem e interajam diretamente com os interessados em alugar imóveis. Isso cria um ecossistema transparente e eficiente para quem busca moradias de aluguel e para quem oferece suporte nesse processo.",
+      "technologies": [
+        "Expo",
+        "React Native",
+        "Tailwindcss",
+        "TypeScript",
+        "NodeJs",
+        "Prisma",
+        "SQL"
+      ],
+      "features": [
+        "Cadastro de acompanhantes",
+        "Publicação de imóveis",
+        "Sistema de agendamento de visitas",
+        "Chat em tempo real",
+        "Avaliações e reviews",
+        "Sistema de pagamentos"
+      ],
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.nirmata.owani"
+    }
+  ]
+} 

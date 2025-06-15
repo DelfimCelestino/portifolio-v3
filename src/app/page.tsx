@@ -3,12 +3,19 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import avatar from "../../public/images/perfil.jpeg"
+import Link from "next/link"
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header with social links */}
       <header className="flex justify-end p-4 md:p-8 space-x-4 md:space-x-8">
+        <Link
+          href="/projects"
+          className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm"
+        >
+          Projetos
+        </Link>
         <a
           href="https://www.linkedin.com/in/delfim-celestino-6187252b4"
           className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm"
