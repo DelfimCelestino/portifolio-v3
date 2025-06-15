@@ -1,10 +1,5 @@
-"use client"
-
-import { use } from "react"
-import { Header } from "@/components/Header"
-import projectsData from "@/data/projects.json"
-import { notFound } from "next/navigation"
 import { Metadata } from 'next'
+import projectsData from '@/data/projects.json'
 
 type Project = {
   id: string
@@ -24,87 +19,94 @@ type Props = {
 // Generate metadata for each project
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
-  const project = projectsData.projects.find(p => p.id === id)
+  const project = projectsData.projects.find((p: Project) => p.id === id)
   
   if (!project) {
     return {
-      title: 'Projeto não encontrado',
-      description: 'O projeto que você está procurando não existe.'
+      title: 'Project Not Found',
+      description: 'The requested project could not be found.'
     }
   }
 
   return {
-    title: `${project.title} | Projetos de Delfim Celestino`,
+    title: `${project.title} | Delfim Celestino`,
     description: project.description,
     openGraph: {
       title: project.title,
       description: project.description,
       type: 'article',
-      authors: ['Delfim Celestino'],
-      tags: project.technologies,
+      tags: project.technologies
     },
     twitter: {
       card: 'summary_large_image',
       title: project.title,
-      description: project.description,
+      description: project.description
     }
   }
 }
 
-export default function ProjectPage({ params }: Props) {
-  const { id } = use(params)
-  const project = projectsData.projects.find((p) => p.id === id)
+export default async function ProjectPage({ params }: Props) {
+  const { id } = await params
+  const project = projectsData.projects.find((p: Project) => p.id === id)
 
   if (!project) {
-    notFound()
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
+          <p className="text-gray-400">The project you're looking for doesn't exist.</p>
+        </div>
+      </div>
+    )
   }
 
   return (
-    <div className="min-h-screen bg-black text-white pb-20 md:pb-0">
-      <Header />
+    <main className="min-h-screen py-12 px-6">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
+        <p className="text-xl text-gray-400 mb-8">{project.description}</p>
+        
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Technologies</h2>
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech: string) => (
+              <span
+                key={tech}
+                className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300 hover:bg-gray-700 transition-colors"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
 
-      {/* Main content */}
-      <main className="flex items-center justify-center md:justify-start px-6 md:pl-32 md:pr-8 min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-120px)]">
-        <div className="max-w-2xl">
-          <h1 className="text-xl md:text-2xl font-normal mb-6 text-white">{project.title}</h1>
-          
-          <div className="space-y-6 text-gray-400 text-sm leading-relaxed">
-            <p className="whitespace-pre-line">{project.longDescription}</p>
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">About</h2>
+          <p className="text-gray-300 leading-relaxed">{project.longDescription}</p>
+        </div>
 
-            <div>
-              <h2 className="text-white text-sm font-medium mb-3">Tecnologias</h2>
-              <div className="flex flex-wrap gap-1.5">
-                {project.technologies.map((tech) => (
-                  <span 
-                    key={tech}
-                    className="px-1.5 py-0.5 text-xs rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
+          <ul className="list-disc list-inside text-gray-300 space-y-2">
+            {project.features.map((feature: string, index: number) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
+        </div>
 
-            <div>
-              <h2 className="text-white text-sm font-medium mb-3">Recursos</h2>
-              <ul className="space-y-1 text-xs">
-                {project.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
-              </ul>
-            </div>
-
+        {project.playStoreLink && (
+          <div className="mt-8">
             <a
               href={project.playStoreLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-white underline hover:text-gray-300 transition-colors"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
-              Ver no Google Play →
+              View on Play Store
             </a>
           </div>
-        </div>
-      </main>
-    </div>
+        )}
+      </div>
+    </main>
   )
 } 
