@@ -50,11 +50,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       authors: ['Delfim Celestino'],
       tags: post.tags,
+      images: [
+        {
+          url: '../../public/images/perfil.jpeg',
+          width: 1200,
+          height: 630,
+          alt: 'Delfim Celestino'
+        }
+      ]
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
+      images: ['../../public/images/perfil.jpeg']
     }
   }
 }
