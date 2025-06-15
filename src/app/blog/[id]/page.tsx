@@ -5,6 +5,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import Link from "next/link"
 import { Metadata } from 'next'
+import { use } from 'react'
 
 type ContentSection = {
   type: 'text' | 'code' | 'heading'
@@ -23,13 +24,14 @@ type BlogPost = {
 }
 
 type Props = {
-  params: { id: string }
+  params: Promise<{ id: string }>
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 // Generate metadata for each blog post
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = blogData.posts.find(p => p.id === params.id)
+  const { id } = await params
+  const post = blogData.posts.find(p => p.id === id)
   
   if (!post) {
     return {
@@ -58,7 +60,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function BlogPostPage({ params }: Props) {
-  const post = blogData.posts.find(p => p.id === params.id) as BlogPost | undefined
+  const { id } = use(params)
+  const post = blogData.posts.find(p => p.id === id) as BlogPost | undefined
   
   if (!post) {
     notFound()
