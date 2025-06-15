@@ -1,0 +1,102 @@
+{
+  "posts": [
+    {
+      "id": "expo-planaki",
+      "title": "Por que escolhemos Expo para o desenvolvimento do Planaki",
+      "description": "Uma análise detalhada sobre nossa decisão de usar Expo no desenvolvimento do Planaki, considerando requisitos técnicos, vantagens e desafios.",
+      "date": "2024-03-15",
+      "readTime": "5 min de leitura",
+      "tags": ["Expo", "React Native", "Mobile Development"],
+      "content": [
+        {
+          "type": "text",
+          "content": "Ao iniciar o desenvolvimento do Planaki, uma das decisões mais importantes foi escolher a tecnologia base para nossa aplicação mobile. Após uma análise cuidadosa, optamos pelo Expo, uma framework que simplifica o desenvolvimento React Native. Neste artigo, compartilho os motivos dessa escolha e como ela impactou nosso processo de desenvolvimento."
+        },
+        {
+          "type": "heading",
+          "content": "Requisitos Técnicos"
+        },
+        {
+          "type": "text",
+          "content": "O Planaki precisava atender a alguns requisitos específicos:"
+        },
+        {
+          "type": "code",
+          "language": "json",
+          "content": "{\n  \"requirements\": {\n    \"crossPlatform\": true,\n    \"realTimeUpdates\": true,\n    \"offlineSupport\": true,\n    \"pushNotifications\": true,\n    \"cameraAccess\": true,\n    \"locationServices\": true\n  }\n}"
+        },
+        {
+          "type": "text",
+          "content": "O Expo nos permitiu implementar todos esses requisitos de forma mais simples e eficiente, reduzindo significativamente o tempo de desenvolvimento."
+        },
+        {
+          "type": "heading",
+          "content": "Vantagens do Expo"
+        },
+        {
+          "type": "text",
+          "content": "Algumas das principais vantagens que encontramos ao usar o Expo:"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "// 1. Configuração simplificada\nexpo init Planaki\n\n// 2. Acesso fácil a recursos nativos\nimport * as Location from 'expo-location';\nimport * as Notifications from 'expo-notifications';\n\n// 3. Hot Reloading e desenvolvimento rápido\nexpo start\n\n// 4. Build simplificado\nexpo build:android\nexpo build:ios"
+        }
+      ]
+    },
+    {
+      "id": "react-native-flutter",
+      "title": "React Native vs Flutter: Nossa experiência com o Planaki",
+      "description": "Uma comparação prática entre React Native e Flutter baseada em nossa experiência no desenvolvimento do Planaki.",
+      "date": "2024-03-10",
+      "readTime": "7 min de leitura",
+      "tags": ["React Native", "Flutter", "Mobile Development"],
+      "content": [
+        {
+          "type": "text",
+          "content": "Antes de iniciar o desenvolvimento do Planaki, realizamos uma análise comparativa entre React Native e Flutter. Neste artigo, compartilho nossa experiência e os fatores que nos levaram a escolher React Native."
+        },
+        {
+          "type": "heading",
+          "content": "Comparação Técnica"
+        },
+        {
+          "type": "text",
+          "content": "Ambas as tecnologias são excelentes para desenvolvimento mobile, mas cada uma tem suas particularidades:"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "// React Native - JavaScript/TypeScript\nconst PlanakiApp = () => {\n  return (\n    <View style={styles.container}>\n      <Text>Bem-vindo ao Planaki</Text>\n    </View>\n  );\n};\n\n// Flutter - Dart\nclass PlanakiApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return Container(\n      child: Text('Bem-vindo ao Planaki'),\n    );\n  }\n}"
+        }
+      ]
+    },
+    {
+      "id": "real-time-planaki",
+      "title": "Implementando recursos em tempo real no Planaki",
+      "description": "Um guia técnico sobre como implementamos recursos em tempo real no Planaki usando Socket.IO e React Native.",
+      "date": "2024-03-05",
+      "readTime": "6 min de leitura",
+      "tags": ["Socket.IO", "Real-time", "React Native"],
+      "content": [
+        {
+          "type": "text",
+          "content": "Um dos principais desafios no desenvolvimento do Planaki foi implementar recursos em tempo real de forma eficiente e escalável. Neste artigo, compartilho nossa abordagem técnica e as soluções que desenvolvemos."
+        },
+        {
+          "type": "heading",
+          "content": "Arquitetura do Sistema"
+        },
+        {
+          "type": "text",
+          "content": "Nossa arquitetura em tempo real é baseada em Socket.IO, que nos permite uma comunicação bidirecional eficiente:"
+        },
+        {
+          "type": "code",
+          "language": "javascript",
+          "content": "// Servidor\nconst io = require('socket.io')(server);\n\nio.on('connection', (socket) => {\n  socket.on('updateStatus', (data) => {\n    // Processa atualização\n    io.emit('statusChanged', data);\n  });\n});\n\n// Cliente React Native\nimport { io } from 'socket.io-client';\n\nsocket.on('statusChanged', (data) => {\n  // Atualiza UI\n});"
+        }
+      ]
+    }
+  ]
+} 
