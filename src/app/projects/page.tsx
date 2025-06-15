@@ -40,11 +40,11 @@ export default function ProjectsPage() {
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {project.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors"
+                      className="px-1.5 py-0.5 text-xs rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors"
                     >
                       {tech}
                     </span>
