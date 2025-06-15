@@ -35,12 +35,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: project.title,
       description: project.description,
       type: 'article',
-      tags: project.technologies
+      tags: project.technologies,
+      images: [
+        {
+          url: '/profile.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Delfim Celestino'
+        }
+      ]
     },
     twitter: {
       card: 'summary_large_image',
       title: project.title,
-      description: project.description
+      description: project.description,
+      images: ['/profile.jpg']
     }
   }
 }
