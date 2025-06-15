@@ -100,7 +100,7 @@ export default function Portfolio() {
           {/* CTA Button */}
           <Button
             className="bg-white text-black hover:bg-gray-100 px-6 py-2 rounded-full text-sm font-medium"
-            onClick={() => (window.location.href = "mailto:delfimcelestinoamissepastola@email.com")}
+            onClick={() => (window.location.href = "mailto:delfimcelestinoamissepastola@gmail.com")}
           >
             Say Hello
           </Button>

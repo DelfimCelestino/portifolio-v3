@@ -41,7 +41,7 @@ export function Header({ showBackButton = false, backLink = "/" }: HeaderProps) 
         Github
       </a>
       <a
-        href="mailto:delfimcelestinoamissepastola@email.com"
+        href="mailto:delfimcelestinoamissepastola@gmail.com"
         className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm"
       >
         @Email
