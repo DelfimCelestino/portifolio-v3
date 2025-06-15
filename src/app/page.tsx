@@ -61,22 +61,22 @@ export default function Portfolio() {
             </div>
 
             {/* Status Section */}
-            <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="relative">
-                <div className="absolute -inset-1">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-ping opacity-75"></div>
+            <div className="flex flex-wrap justify-center gap-1.5 text-xs text-gray-400 mb-8">
+              <div className="flex items-center">
+                <div className="relative -ml-1 mr-1">
+                  <div className="absolute -inset-1">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-ping opacity-75"></div>
+                  </div>
+                  <div className="relative w-2 h-2 bg-green-500 rounded-full"></div>
                 </div>
-                <div className="relative w-2 h-2 bg-green-500 rounded-full"></div>
-              </div>
-              <div className="flex flex-wrap justify-center gap-1.5 text-xs text-gray-400">
                 <span>codando</span>
-                <span>•</span>
-                <span>vendo anime</span>
-                <span>•</span>
-                <span>comendo snacks</span>
-                <span>•</span>
-                <span>escutando lofi</span>
               </div>
+              <span>•</span>
+              <span>vendo anime</span>
+              <span>•</span>
+              <span>comendo snacks</span>
+              <span>•</span>
+              <span>escutando lofi</span>
             </div>
 
             {/* Skills section */}
