@@ -22,7 +22,7 @@ export function Header() {
                 sizes="32px"
               />
             </div>
-            <span className="text-gray-400 group-hover:text-white transition-colors text-xs md:text-sm">
+            <span className="hidden md:inline text-gray-400 group-hover:text-white transition-colors text-xs md:text-sm">
               Delfim Celestino
             </span>
           </Link>

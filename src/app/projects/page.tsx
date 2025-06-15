@@ -4,7 +4,19 @@ import { Header } from "@/components/Header"
 import projectsData from "@/data/projects.json"
 import Link from "next/link"
 
+type Project = {
+  id: string
+  title: string
+  description: string
+  longDescription: string
+  technologies: string[]
+  features: string[]
+  playStoreLink: string
+}
+
 export default function ProjectsPage() {
+  const projects = projectsData.projects as Project[]
+
   return (
     <div className="min-h-screen bg-black text-white pb-20 md:pb-0">
       <Header />
@@ -15,7 +27,7 @@ export default function ProjectsPage() {
           <h1 className="text-xl md:text-2xl font-normal mb-8 text-white">Projetos</h1>
           
           <div className="space-y-12">
-            {projectsData.projects.map((project) => (
+            {projects.map((project) => (
               <div key={project.id} className="space-y-4">
                 <Link 
                   href={`/projects/${project.id}`}
@@ -28,16 +40,15 @@ export default function ProjectsPage() {
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-3 text-xs text-gray-400">
-                  {project.technologies.slice(0, 4).map((tech, index) => (
-                    <span key={tech}>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span 
+                      key={tech}
+                      className="px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors"
+                    >
                       {tech}
-                      {index < Math.min(3, project.technologies.length - 1) && <span> • </span>}
                     </span>
                   ))}
-                  {project.technologies.length > 4 && (
-                    <span>+{project.technologies.length - 4}</span>
-                  )}
                 </div>
               </div>
             ))}

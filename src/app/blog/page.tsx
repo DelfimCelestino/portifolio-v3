@@ -44,7 +44,7 @@ export default function BlogPage() {
                 <p className="text-gray-400 text-sm leading-relaxed">
                   {post.description}
                 </p>
-                <div className="flex items-center gap-4 text-xs text-gray-400">
+                <div className="flex flex-wrap items-center gap-4 text-xs text-gray-400">
                   <time dateTime={post.date}>
                     {new Date(post.date).toLocaleDateString('pt-BR', {
                       year: 'numeric',
@@ -55,11 +55,13 @@ export default function BlogPage() {
                   <span>•</span>
                   <span>{post.readTime}</span>
                   <span>•</span>
-                  <div className="flex gap-2">
-                    {post.tags.map((tag, index) => (
-                      <span key={tag}>
+                  <div className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <span 
+                        key={tag}
+                        className="px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors"
+                      >
                         {tag}
-                        {index < post.tags.length - 1 && ', '}
                       </span>
                     ))}
                   </div>
