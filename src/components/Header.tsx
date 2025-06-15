@@ -4,12 +4,9 @@ import Link from "next/link"
 import Image from "next/image"
 import avatar from "../../public/images/perfil.jpeg"
 
-interface HeaderProps {
-  showBackButton?: boolean
-  backLink?: string
-}
 
-export function Header({ showBackButton = false, backLink = "/" }: HeaderProps) {
+
+export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-sm z-50 border-b border-gray-800">
       <div className="flex items-center justify-between p-4 md:p-8 max-w-7xl mx-auto">
