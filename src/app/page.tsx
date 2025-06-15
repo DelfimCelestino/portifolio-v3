@@ -63,16 +63,15 @@ export default function Portfolio() {
             {/* Skills section */}
             <div className="mb-8">
               <h2 className="text-white text-sm font-medium mb-3">Top Skills</h2>
-              <div className="flex flex-wrap justify-center gap-3 text-xs text-gray-400">
-                <span>JavaScript</span>
-                <span>•</span>
-                <span>React.js</span>
-                <span>•</span>
-                <span>CSS</span>
-                <span>•</span>
-                <span>Software Design</span>
-                <span>•</span>
-                <span>UI/UX Design</span>
+              <div className="flex flex-wrap justify-center gap-1.5">
+                {["JavaScript", "React.js", "CSS", "Software Design", "UI/UX Design"].map((skill) => (
+                  <span 
+                    key={skill}
+                    className="px-1.5 py-0.5 text-xs rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
