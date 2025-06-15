@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       tags: project.technologies,
       images: [
         {
-          url: '../../public/images/perfil.jpeg',
+          url: '/perfil.jpeg',
           width: 1200,
           height: 630,
           alt: 'Delfim Celestino'
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: project.title,
       description: project.description,
-      images: ['../../public/images/perfil.jpeg']
+      images: ['/perfil.jpeg']
     }
   }
 }
