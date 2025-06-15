@@ -1,20 +1,13 @@
 "use client"
 
+import { Header } from "@/components/Header"
 import projectsData from "@/data/projects.json"
 import Link from "next/link"
 
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="flex justify-end p-4 md:p-8">
-        <a
-          href="/"
-          className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm"
-        >
-          ← Voltar
-        </a>
-      </header>
+      <Header showBackButton backLink="/" />
 
       {/* Main content */}
       <main className="flex items-center justify-center md:justify-start px-6 md:pl-32 md:pr-8 min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-120px)]">
