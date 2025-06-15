@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white pb-20 md:pb-0">
       <Header showBackButton backLink="/" />
 
       {/* Main content */}

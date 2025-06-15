@@ -14,7 +14,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white pb-20 md:pb-0">
       <Header showBackButton backLink="/projects" />
 
       {/* Main content */}

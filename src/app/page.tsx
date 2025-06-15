@@ -11,7 +11,7 @@ export default function Portfolio() {
   const featuredProjects = projectsData.projects.slice(0, 3)
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white pb-20 md:pb-0">
       <Header />
 
       {/* Main content - responsive positioning */}
@@ -98,12 +98,14 @@ export default function Portfolio() {
           </div>
 
           {/* CTA Button */}
-          <Button
-            className="bg-white text-black hover:bg-gray-100 px-6 py-2 rounded-full text-sm font-medium"
-            onClick={() => (window.location.href = "mailto:delfimcelestinoamissepastola@gmail.com")}
-          >
-            Say Hello
-          </Button>
+          <div className="md:block fixed md:static bottom-6 right-6 md:bottom-auto md:right-auto">
+            <Button
+              className="bg-white text-black hover:bg-gray-100 px-6 py-2 rounded-full text-sm font-medium shadow-lg md:shadow-none"
+              onClick={() => (window.location.href = "mailto:delfimcelestinoamissepastola@gmail.com")}
+            >
+              Say Hello
+            </Button>
+          </div>
         </div>
       </main>
     </div>
