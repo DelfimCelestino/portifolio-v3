@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       tags: post.tags,
       images: [
         {
-          url: '/perfil.jpeg',
+          url: 'https://delfim.vercel.app/images/perfil.jpeg',
           width: 1200,
           height: 630,
           alt: 'Delfim Celestino'
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: ['/perfil.jpeg']
+      images: ['https://delfim.vercel.app/images/perfil.jpeg']
     }
   }
 }
