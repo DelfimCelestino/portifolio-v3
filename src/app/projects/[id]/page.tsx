@@ -54,7 +54,7 @@ export default async function ProjectPage({ params }: Props) {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
-          <p className="text-gray-400">The project you're looking for doesn't exist.</p>
+          <p className="text-gray-400">The project you&apos;re looking for doesn&apos;t exist.</p>
         </div>
       </div>
     )
