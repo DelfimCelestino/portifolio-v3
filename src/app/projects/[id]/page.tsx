@@ -4,8 +4,54 @@ import { use } from "react"
 import { Header } from "@/components/Header"
 import projectsData from "@/data/projects.json"
 import { notFound } from "next/navigation"
+import { Metadata } from 'next'
 
-export default function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+type Project = {
+  id: string
+  title: string
+  description: string
+  longDescription: string
+  technologies: string[]
+  features: string[]
+  playStoreLink: string
+}
+
+type Props = {
+  params: Promise<{ id: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+// Generate metadata for each project
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params
+  const project = projectsData.projects.find(p => p.id === id)
+  
+  if (!project) {
+    return {
+      title: 'Projeto não encontrado',
+      description: 'O projeto que você está procurando não existe.'
+    }
+  }
+
+  return {
+    title: `${project.title} | Projetos de Delfim Celestino`,
+    description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      type: 'article',
+      authors: ['Delfim Celestino'],
+      tags: project.technologies,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: project.title,
+      description: project.description,
+    }
+  }
+}
+
+export default function ProjectPage({ params }: Props) {
   const { id } = use(params)
   const project = projectsData.projects.find((p) => p.id === id)
 
@@ -27,11 +73,13 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
             <div>
               <h2 className="text-white text-sm font-medium mb-3">Tecnologias</h2>
-              <div className="flex flex-wrap gap-3 text-xs">
-                {project.technologies.map((tech, index) => (
-                  <span key={tech}>
+              <div className="flex flex-wrap gap-1.5">
+                {project.technologies.map((tech) => (
+                  <span 
+                    key={tech}
+                    className="px-1.5 py-0.5 text-xs rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors"
+                  >
                     {tech}
-                    {index < project.technologies.length - 1 && <span> • </span>}
                   </span>
                 ))}
               </div>
