@@ -34,22 +34,22 @@ export default function BlogPostPage({ params }: { params: Promise<{ id: string 
 
   return (
     <div className="min-h-screen bg-black text-white pb-20 md:pb-0">
-      <Header  />
+      <Header />
 
       {/* Main content */}
-      <main className="flex items-center justify-center md:justify-start px-6 md:pl-32 md:pr-8 min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-120px)]">
-        <article className="max-w-2xl">
-          <header className="mb-12">
+      <main className="flex items-center justify-center md:justify-start px-4 md:px-6 md:pl-32 md:pr-8 min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-120px)]">
+        <article className="w-full max-w-2xl">
+          <header className="mb-8 md:mb-12">
             <Link 
               href="/blog"
-              className="text-gray-400 hover:text-white transition-colors mb-4 inline-block"
+              className="text-gray-400 hover:text-white transition-colors mb-4 inline-block text-sm md:text-base"
             >
               ← Voltar para o blog
             </Link>
-            <h1 className="text-2xl md:text-3xl font-normal mb-4 text-white">
+            <h1 className="text-xl md:text-3xl font-normal mb-4 text-white">
               {post.title}
             </h1>
-            <div className="flex items-center gap-4 text-sm text-gray-400">
+            <div className="flex flex-wrap items-center gap-2 md:gap-4 text-xs md:text-sm text-gray-400">
               <time dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString('pt-BR', {
                   year: 'numeric',
@@ -60,11 +60,13 @@ export default function BlogPostPage({ params }: { params: Promise<{ id: string 
               <span>•</span>
               <span>{post.readTime}</span>
               <span>•</span>
-              <div className="flex gap-2">
-                {post.tags.map((tag, index) => (
-                  <span key={tag}>
+              <div className="flex flex-wrap gap-1.5">
+                {post.tags.map((tag) => (
+                  <span 
+                    key={tag}
+                    className="px-1.5 py-0.5 text-xs rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 transition-colors"
+                  >
                     {tag}
-                    {index < post.tags.length - 1 && ', '}
                   </span>
                 ))}
               </div>
@@ -73,21 +75,22 @@ export default function BlogPostPage({ params }: { params: Promise<{ id: string 
 
           <div className="prose prose-invert max-w-none">
             {post.content.map((section: ContentSection, index: number) => (
-              <div key={index} className="mb-8">
+              <div key={index} className="mb-6 md:mb-8">
                 {section.type === 'text' && (
-                  <p className="text-gray-300 leading-relaxed mb-4">
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-4">
                     {section.content}
                   </p>
                 )}
                 {section.type === 'code' && (
-                  <div className="my-6">
+                  <div className="my-4 md:my-6">
                     <SyntaxHighlighter
                       language={section.language}
                       style={vscDarkPlus}
                       customStyle={{
                         margin: 0,
                         borderRadius: '0.5rem',
-                        padding: '1rem',
+                        padding: '0.75rem',
+                        fontSize: '0.875rem',
                       }}
                     >
                       {section.content}
@@ -95,7 +98,7 @@ export default function BlogPostPage({ params }: { params: Promise<{ id: string 
                   </div>
                 )}
                 {section.type === 'heading' && (
-                  <h2 className="text-xl font-normal text-white mt-8 mb-4">
+                  <h2 className="text-lg md:text-xl font-normal text-white mt-6 md:mt-8 mb-3 md:mb-4">
                     {section.content}
                   </h2>
                 )}
