@@ -104,7 +104,7 @@ export default function Portfolio() {
                 {featuredProjects.map((project) => (
                   <Link 
                     key={project.id}
-                    href={`/projects/${project.id}`}
+                    href={`/project/${project.id}`}
                     className="block group"
                   >
                     <h3 className="text-white text-sm group-hover:text-gray-300 transition-colors">
@@ -114,7 +114,7 @@ export default function Portfolio() {
                   </Link>
                 ))}
                 <Link 
-                  href="/projects"
+                  href="/project"
                   className="inline-block text-white underline hover:text-gray-300 transition-colors text-xs mt-2"
                 >
                   Ver todos os projetos →

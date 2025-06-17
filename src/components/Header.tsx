@@ -31,7 +31,7 @@ export function Header() {
         {/* Right side - Navigation links */}
         <div className="flex items-center space-x-4 md:space-x-8">
           <Link
-            href="/projects"
+            href="/project"
             className="text-gray-400 hover:text-white transition-colors text-xs md:text-sm"
           >
             Projetos

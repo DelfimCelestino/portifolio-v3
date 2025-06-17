@@ -30,7 +30,7 @@ export default function ProjectsPage() {
             {projects.map((project) => (
               <div key={project.id} className="space-y-4">
                 <Link 
-                  href={`/projects/${project.id}`}
+                  href={`/project/${project.id}`}
                   className="block group"
                 >
                   <h2 className="text-white text-lg group-hover:text-gray-300 transition-colors">
