@@ -21,7 +21,49 @@
         "Eventos públicos e privados",
         "Notificações em tempo real"
       ],
-      "playStoreLink": "https://play.google.com/store/apps/details?id=com.nirmata.planaki"
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.nirmata.planaki",
+      "terms": {
+        "title": "Termos de Uso do Planaki",
+        "sections": [
+          {
+            "title": "1. Aceitação dos Termos",
+            "content": "Ao usar o Planaki, você concorda com estes termos de uso. O aplicativo é destinado a maiores de 13 anos."
+          },
+          {
+            "title": "2. Uso do Serviço",
+            "content": "O Planaki permite criar e gerenciar eventos, compartilhar fotos e gerenciar contribuições. Você é responsável por todo o conteúdo que compartilha."
+          },
+          {
+            "title": "3. Privacidade",
+            "content": "Coletamos informações necessárias para o funcionamento do app, incluindo dados de perfil, fotos e localização quando relevante para eventos."
+          },
+          {
+            "title": "4. Segurança",
+            "content": "Mantenha suas credenciais seguras e não compartilhe sua conta. Reporte qualquer uso não autorizado imediatamente."
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Política de Privacidade do Planaki",
+        "sections": [
+          {
+            "title": "1. Dados Coletados",
+            "content": "Coletamos informações de perfil, fotos, dados de eventos e localização quando necessário para funcionalidades específicas."
+          },
+          {
+            "title": "2. Uso dos Dados",
+            "content": "Seus dados são usados para fornecer e melhorar o serviço, personalizar sua experiência e manter a segurança da plataforma."
+          },
+          {
+            "title": "3. Compartilhamento",
+            "content": "Seus dados podem ser compartilhados com outros usuários conforme as configurações de privacidade que você escolher para cada evento."
+          },
+          {
+            "title": "4. Seus Direitos",
+            "content": "Você pode acessar, corrigir ou excluir seus dados a qualquer momento através das configurações do aplicativo."
+          }
+        ]
+      }
     },
     {
       "id": "radii",
@@ -45,7 +87,49 @@
         "Chat em tempo real com conexões estabelecidas",
         "Configurações personalizáveis de privacidade"
       ],
-      "playStoreLink": "https://play.google.com/store/apps/details?id=com.nirmata.radii"
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.nirmata.radii",
+      "terms": {
+        "title": "Termos de Uso do Radii",
+        "sections": [
+          {
+            "title": "1. Aceitação dos Termos",
+            "content": "Ao usar o Radii, você concorda com estes termos. O app requer permissão de localização para funcionar corretamente."
+          },
+          {
+            "title": "2. Uso do Serviço",
+            "content": "O Radii permite conectar-se com pessoas próximas. Você é responsável por suas interações e deve respeitar a privacidade dos outros."
+          },
+          {
+            "title": "3. Localização",
+            "content": "O app usa sua localização em tempo real. Você pode controlar quando compartilhar sua localização através das configurações."
+          },
+          {
+            "title": "4. Segurança",
+            "content": "Mantenha suas credenciais seguras e reporte qualquer comportamento suspeito. Não compartilhe informações sensíveis no chat."
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Política de Privacidade do Radii",
+        "sections": [
+          {
+            "title": "1. Dados de Localização",
+            "content": "Coletamos sua localização em tempo real para mostrar pessoas próximas. Os dados são excluídos após 24 horas se não houver conexão."
+          },
+          {
+            "title": "2. Dados do Perfil",
+            "content": "Seu perfil inclui informações básicas como nome e foto. Você controla quem pode ver essas informações."
+          },
+          {
+            "title": "3. Compartilhamento",
+            "content": "Sua localização é compartilhada apenas com usuários que você aprovar. Você pode revogar o acesso a qualquer momento."
+          },
+          {
+            "title": "4. Seus Direitos",
+            "content": "Você pode desativar o rastreamento de localização, excluir sua conta e solicitar uma cópia dos seus dados a qualquer momento."
+          }
+        ]
+      }
     },
     {
       "id": "owani",
@@ -69,7 +153,49 @@
         "Avaliações e reviews",
         "Sistema de pagamentos"
       ],
-      "playStoreLink": "https://play.google.com/store/apps/details?id=com.nirmata.owani"
+      "playStoreLink": "https://play.google.com/store/apps/details?id=com.nirmata.owani",
+      "terms": {
+        "title": "Termos de Uso do Owani",
+        "sections": [
+          {
+            "title": "1. Aceitação dos Termos",
+            "content": "Ao usar o Owani, você concorda com estes termos. O app é destinado a maiores de 18 anos."
+          },
+          {
+            "title": "2. Uso do Serviço",
+            "content": "O Owani conecta acompanhantes com inquilinos. Acompanhantes devem fornecer informações precisas sobre os imóveis."
+          },
+          {
+            "title": "3. Pagamentos",
+            "content": "As taxas de serviço são claramente informadas antes de cada transação. Reembolsos seguem nossa política específica."
+          },
+          {
+            "title": "4. Responsabilidades",
+            "content": "Acompanhantes são responsáveis pela veracidade das informações dos imóveis. Usuários devem respeitar os horários agendados."
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Política de Privacidade do Owani",
+        "sections": [
+          {
+            "title": "1. Dados Coletados",
+            "content": "Coletamos informações de perfil, dados de imóveis, histórico de visitas e informações de pagamento quando necessário."
+          },
+          {
+            "title": "2. Uso dos Dados",
+            "content": "Seus dados são usados para facilitar o processo de aluguel, processar pagamentos e melhorar o serviço."
+          },
+          {
+            "title": "3. Compartilhamento",
+            "content": "Informações de imóveis são compartilhadas publicamente. Dados pessoais são compartilhados apenas com partes envolvidas na transação."
+          },
+          {
+            "title": "4. Seus Direitos",
+            "content": "Você pode acessar, corrigir ou excluir seus dados, incluindo anúncios de imóveis, a qualquer momento."
+          }
+        ]
+      }
     }
   ]
 } 
