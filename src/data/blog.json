@@ -162,6 +162,89 @@
           "content": "// Servidor\nconst io = require('socket.io')(server);\n\nio.on('connection', (socket) => {\n  socket.on('updateStatus', (data) => {\n    // Processa atualização\n    io.emit('statusChanged', data);\n  });\n});\n\n// Cliente React Native\nimport { io } from 'socket.io-client';\n\nsocket.on('statusChanged', (data) => {\n  // Atualiza UI\n});"
         }
       ]
+    },
+    {
+      "id": "setembro-presente-2024",
+      "title": "Setembro Chegando: O Guia Galáctico e Geek de Presentes Irresistíveis!",
+      "description": "Setembro está batendo na porta e, se você está pensando em me surpreender, prepare-se para uma lista de presentes que é a minha cara: de astronautas a tecnologia, de universos distantes a animações insanas!",
+      "date": "2024-09-01",
+      "readTime": "6 min de leitura",
+      "tags": ["Presentes", "Astronomia", "Games", "Tecnologia", "Geek"],
+      "content": [
+        {
+          "type": "text",
+          "content": "Setembro está chegando e, como todo bom geek, já começo a sonhar com aquela lista de presentes que só quem me conhece de verdade vai acertar. Se você está sem ideias, relaxa: preparei um guia especial para facilitar sua vida (e garantir minha felicidade, claro!)."
+        },
+        {
+          "type": "heading",
+          "content": "1. Boneco de Astronauta: Meu Fascínio pelo Universo"
+        },
+        {
+          "type": "text",
+          "content": "Vocês sabem que eu sou completamente fascinado por astronomia, planetas, galáxias e tudo que envolve o universo. Então, nada mais justo do que começar com um boneco de astronauta para decorar minha mesa ou estante. Se quiserem ousar, uma camiseta do filme Interestelar também cai muito bem!"
+        },
+        {
+          "type": "image",
+          "src": "/images/austronault.jpg",
+          "alt": "Boneco de astronauta ou camiseta do filme Interestelar"
+        },
+        {
+          "type": "heading",
+          "content": "2. Placa de Vídeo RX580: O Poder dos Games"
+        },
+        {
+          "type": "text",
+          "content": "Quem me conhece sabe: eu sou apaixonado por games e computação! Uma RX580 seria o presente perfeito para turbinar minhas jogatinas e projetos. Afinal, gráficos incríveis e performance nunca são demais, né?"
+        },
+        {
+          "type": "image",
+          "src": "/images/rx580.jpg",
+          "alt": "Placa de vídeo RX580 para gamers apaixonados"
+        },
+        {
+          "type": "heading",
+          "content": "3. Teclado Mecânico: O Som da Produtividade"
+        },
+        {
+          "type": "text",
+          "content": "Nada como digitar ouvindo aquele clique satisfatório de um teclado mecânico. Além de estiloso, ele deixa qualquer setup mais bonito e minha produtividade vai às alturas!"
+        },
+        {
+          "type": "image",
+          "src": "/images/mechanic-keyboard.jpg",
+          "alt": "Teclado mecânico para produtividade e estilo"
+        },
+        {
+          "type": "heading",
+          "content": "4. Conta de Desenvolvedor Apple: Criando o Futuro"
+        },
+        {
+          "type": "text",
+          "content": "Vocês sabem que eu adoro criar aplicativos, explorar novas ideias e colocar projetos no ar. Uma conta de desenvolvedor da Apple é o presente perfeito para alimentar minha paixão por tecnologia e inovação!"
+        },
+        {
+          "type": "image",
+          "src": "/images/apple-developer.jpg",
+          "alt": "Conta de desenvolvedor Apple para criadores de apps"
+        },
+        {
+          "type": "heading",
+          "content": "5. Camiseta Rick and Morty: Estilo e Diversão Interdimensional"
+        },
+        {
+          "type": "text",
+          "content": "E para fechar com chave de ouro, uma camiseta do Rick and Morty! Porque além de amar ciência, universos paralelos e viagens malucas, nada melhor do que vestir o humor ácido dessa dupla insana. Wubba Lubba Dub Dub!"
+        },
+        {
+          "type": "image",
+          "src": "/images/rick-and-morty-shirt.jpg",
+          "alt": "Camiseta Rick and Morty para fãs de animação e universos paralelos"
+        },
+        {
+          "type": "text",
+          "content": "Gostou das dicas? Agora não tem desculpa para errar no presente! Setembro promete ser épico com qualquer um desses itens. 🚀🕹️⌨️🍏🛸"
+        }
+      ]
     }
   ]
 } 

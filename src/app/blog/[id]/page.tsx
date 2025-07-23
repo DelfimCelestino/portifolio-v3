@@ -8,9 +8,11 @@ import { Metadata } from 'next'
 import { use } from 'react'
 
 type ContentSection = {
-  type: 'text' | 'code' | 'heading'
+  type: 'text' | 'code' | 'heading' | 'image'
   content: string
   language?: string
+  src?: string
+  alt?: string
 }
 
 type BlogPost = {
@@ -145,6 +147,16 @@ export default function BlogPostPage({ params }: Props) {
                   <h2 className="text-lg md:text-xl font-normal text-white mt-6 md:mt-8 mb-3 md:mb-4">
                     {section.content}
                   </h2>
+                )}
+                {section.type === 'image' && (
+                  <div className="flex justify-center my-6">
+                    <img
+                      src={section.src}
+                      alt={section.alt || ''}
+                      className="rounded-lg max-h-72 object-contain"
+                      style={{ margin: '0 auto' }}
+                    />
+                  </div>
                 )}
               </div>
             ))}
