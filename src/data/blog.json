@@ -167,7 +167,7 @@
       "id": "setembro-presente-2024",
       "title": "Setembro Chegando: O Guia Galáctico e Geek de Presentes Irresistíveis!",
       "description": "Setembro está batendo na porta e, se você está pensando em me surpreender, prepare-se para uma lista de presentes que é a minha cara: de astronautas a tecnologia, de universos distantes a animações insanas!",
-      "date": "2024-09-01",
+      "date": "2024-09-03",
       "readTime": "6 min de leitura",
       "tags": ["Presentes", "Astronomia", "Games", "Tecnologia", "Geek"],
       "content": [
@@ -177,7 +177,20 @@
         },
         {
           "type": "heading",
-          "content": "1. Boneco de Astronauta: Meu Fascínio pelo Universo"
+          "content": "1. Conta de Desenvolvedor Apple: O Presente Mais Importante!"
+        },
+        {
+          "type": "text",
+          "content": "Se tem um presente que realmente faz meu coração bater mais forte, é a conta de desenvolvedor da Apple! Vocês sabem que eu adoro criar aplicativos, explorar novas ideias e colocar projetos no ar. Com ela, posso publicar meus apps, inovar e transformar ideias em realidade. Se quiser acertar em cheio, esse é o presente!"
+        },
+        {
+          "type": "image",
+          "src": "/images/apple-developer.jpg",
+          "alt": "Conta de desenvolvedor Apple para criadores de apps"
+        },
+        {
+          "type": "heading",
+          "content": "2. Boneco de Astronauta: Meu Fascínio pelo Universo"
         },
         {
           "type": "text",
@@ -190,7 +203,7 @@
         },
         {
           "type": "heading",
-          "content": "2. Placa de Vídeo RX580: O Poder dos Games"
+          "content": "3. Placa de Vídeo RX580: O Poder dos Games"
         },
         {
           "type": "text",
@@ -203,7 +216,7 @@
         },
         {
           "type": "heading",
-          "content": "3. Teclado Mecânico: O Som da Produtividade"
+          "content": "4. Teclado Mecânico: O Som da Produtividade"
         },
         {
           "type": "text",
@@ -213,19 +226,6 @@
           "type": "image",
           "src": "/images/mechanic-keyboard.jpg",
           "alt": "Teclado mecânico para produtividade e estilo"
-        },
-        {
-          "type": "heading",
-          "content": "4. Conta de Desenvolvedor Apple: Criando o Futuro"
-        },
-        {
-          "type": "text",
-          "content": "Vocês sabem que eu adoro criar aplicativos, explorar novas ideias e colocar projetos no ar. Uma conta de desenvolvedor da Apple é o presente perfeito para alimentar minha paixão por tecnologia e inovação!"
-        },
-        {
-          "type": "image",
-          "src": "/images/apple-developer.jpg",
-          "alt": "Conta de desenvolvedor Apple para criadores de apps"
         },
         {
           "type": "heading",
