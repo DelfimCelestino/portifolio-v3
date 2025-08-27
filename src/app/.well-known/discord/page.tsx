@@ -1,3 +1,9 @@
+import React from "react";
+
 export default function DiscordPage() {
-  return <div>Discord</div>;
+  return (
+    <div>
+      <h1>Discord</h1>
+    </div>
+  );
 }
